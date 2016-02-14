@@ -6,7 +6,7 @@ require_once __DIR__."/classes/Expand.php";
 $taxo0=  unserialize(\file_get_contents(__DIR__."/resources/phpTaxonomy.ser"));
 $expansion =new Expand();
 $taxo=$expansion->setTermsFromTaxo($taxo0);
-$text_doc="123 Outsourcing and Engineering management and Computational and artificial intelligence  and B-ISDN and Logic devices and B-ISDN";
+$text_doc="123 Logic devices and Engineering management and Computational and artificial intelligence  and B-ISDN and Logic devices and B-ISDN";
 $text_doc0="B.2. Component Integration. 
     Integrates hardware, software or sub system components into an existing or a new system. Complies with established processes and procedures such as, configuration management and package maintenance. Takes into account the compatibility of existing and new modules to ensure system integrity, system interoperability and information security. Verifies and tests system capacity and performance and documentation of successful integration.
 Proficiency Levels
@@ -27,6 +27,7 @@ S3 match customers' needs with existing products
 S4 verify that integrated systems capabilities and efficiency match specifications
 S5 secure/ back-up data to ensure integrity during system integration";
 
-$expansion->setDoc($text_doc);
+$expansion->setDoc($text_doc0);
 $positions=$expansion->find();
 var_dump($positions);
+//$expansion->deleteFP();
