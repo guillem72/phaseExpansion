@@ -1,10 +1,10 @@
 <?php
 namespace glluch\phaseExpansion;
-require_once __DIR__."/classes/Expand.php";
+require_once __DIR__."/classes/FindTerms.php";
 
 
 $taxo0=  unserialize(\file_get_contents(__DIR__."/resources/phpTaxonomy.ser"));
-$expansion =new Expand();
+$expansion =new FindTerms();
 $taxo=$expansion->setTermsFromTaxo($taxo0);
 $text_doc="123 Logic devices and Engineering management and Computational and artificial intelligence  and B-ISDN and Logic devices and B-ISDN";
 $text_doc0="B.2. Component Integration. 
